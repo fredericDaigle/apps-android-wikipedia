@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wikipedia.test.TestRunner;
 
+import static junit.framework.Assert.fail;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -14,5 +15,10 @@ public class DateUtilTest {
     @Test
     public void testGetHttpLastModifiedDate() throws Throwable {
         assertThat(DateUtil.getShortDateString(DateUtil.getHttpLastModifiedDate(HTTP_DATE_HEADER)), is("May 25, 2017"));
+    }
+
+    @Test
+    public void test1() throws Throwable {
+        fail();
     }
 }
